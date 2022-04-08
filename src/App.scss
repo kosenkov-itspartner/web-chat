@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Press Start 2P", cursive;
+  font-weight: 600;
+  font-size: 18px;
+  color: #7ce61d;
+}
+.container {
+  background-color: #282c34;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 30px;
+}
+.header {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.wrap {
+  display: flex;
+  height: 85vh;
+}
+.messages {
+  width: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.users {
+  width: 20%;
+  padding: 0 20px 20px 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .title {
+    color: whitesmoke;
+    margin-bottom: 20px;
+  }
+  ul li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: #0000ff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+  }
+}
+.text-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+.content {
+  width: 100%;
+  .user-name {
+    color: whitesmoke;
+    text-transform: lowercase;
+  }
+  .user-message {
+    margin: 0 10px;
+    word-break: break-all;
+  }
+  .user-notification {
+    color: rgba(192, 192, 192, 0.4);
+    text-transform: lowercase;
+  }
+}
+.form-control {
+  width: 100%;
+  background-color: #282c34;
+  outline: none;
+  border: none;
+}
