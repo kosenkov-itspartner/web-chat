@@ -7,7 +7,7 @@
   font-size: 18px;
   color: #7ce61d;
 }
-.container {
+.contain {
   background-color: #282c34;
   min-height: 100vh;
   overflow: hidden;
@@ -28,7 +28,7 @@
   overflow-x: hidden;
 }
 .users {
-  width: 20%;
+  min-width: 20%;
   padding: 0 20px 20px 20px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -36,6 +36,9 @@
   .title {
     color: whitesmoke;
     margin-bottom: 20px;
+  }
+  ul {
+    padding: 0;
   }
   ul li {
     list-style: none;
@@ -65,9 +68,37 @@
     text-transform: lowercase;
   }
 }
-.form-control {
+.user-input {
   width: 100%;
   background-color: #282c34;
   outline: none;
   border: none;
+}
+
+.auth {
+  width: 100vw;
+  height: 100vh;
+  background-color: #282c34;
+  &__window {
+    position: fixed;
+    padding: 20px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 650px;
+    height: 300px;
+    background-color: #353a42;
+    border-radius: 10px;
+  }
+  &__input {
+    background-color: #353a42;
+    outline: none;
+    border: none;
+    color: whitesmoke;
+    padding: 5px;
+    width: 100%;
+  }
+  &__lable {
+    color: #0000ff;
+  }
 }
