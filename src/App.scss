@@ -64,7 +64,8 @@
     word-break: break-all;
   }
   .user-notification {
-    color: rgba(192, 192, 192, 0.4);
+    // color: rgba(192, 192, 192, 0.4);
+    color: rgba(193, 193, 193, 0.5);
     text-transform: lowercase;
   }
 }
@@ -101,4 +102,15 @@
   &__lable {
     color: #0000ff;
   }
+}
+
+.FreeScrollbar-vertical-track {
+  background-color: transparent !important;
+  border: none !important;
+}
+.FreeScrollbar-vertical-handler {
+  // height: 10% !important;
+  background-color: rgba(193, 193, 193, 0.5) !important;
+  margin: 10px 0;
+  transition: all 0.2s linear 0s !important;
 }
