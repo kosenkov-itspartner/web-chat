@@ -45,17 +45,17 @@ const Auth = ({ setUsername, setIsAuth }) => {
         <h2 className="mb-5">Matrix has you</h2>
         <form onSubmit={submitAuth}>
           <h5 className="mb-4 auth__lable">What is your nickname?</h5>
-          <h5 className="mb-4 ">{error}</h5>
           <input
-            className="auth__input"
+            className="auth__input mb-4"
             type="text"
             autoComplete="false"
-            autoFocus
             spellCheck="false"
+            autoFocus
             ref={input}
             onBlur={returnFocus}
             onChange={changeAuth}
           ></input>
+          <h5>{error}</h5>
         </form>
       </div>
     </div>

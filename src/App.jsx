@@ -10,7 +10,8 @@ const App = () => {
 
   return (
     <Routes>
-      <Route path="/" element={<Auth setUsername={setUsername} setIsAuth={setIsAuth} />} />
+      <Route path="/" element={<Navigate to="/auth" />} />
+      <Route path="/auth" element={<Auth setUsername={setUsername} setIsAuth={setIsAuth} />} />
       <Route path="/main" element={isAuth ? <Main username={username} /> : <Navigate to="/" />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>

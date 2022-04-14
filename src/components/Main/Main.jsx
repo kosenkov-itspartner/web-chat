@@ -13,6 +13,7 @@ const Main = ({ username }) => {
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
+  const input = React.createRef();
 
   useEffect(() => {
     socket.emit("username", username);
@@ -46,6 +47,10 @@ const Main = ({ username }) => {
     setMessage("");
   };
 
+  const returnFocus = () => {
+    input?.current?.focus();
+  };
+
   return (
     <div className="contain">
       <div className="header">
@@ -66,12 +71,13 @@ const Main = ({ username }) => {
             <input
               type="text"
               className="user-input"
-              onChange={(e) => setMessage(e.currentTarget.value)}
               value={message}
-              id="text"
               autoFocus
-              autoComplete="off"
+              autoComplete="false"
               spellCheck="false"
+              ref={input}
+              onChange={(e) => setMessage(e.currentTarget.value)}
+              onBlur={returnFocus}
             />
           </form>
         </div>
