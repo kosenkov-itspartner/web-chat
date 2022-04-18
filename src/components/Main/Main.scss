@@ -1,0 +1,95 @@
+.contain {
+  background-color: #282c34;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 30px;
+}
+.header {
+  font-size: 28px;
+  margin-bottom: 30px;
+  display: flex;
+  width: 100%;
+  &__title {
+    width: 80%;
+  }
+  &__online {
+    width: 20%;
+    padding: 0 20px;
+    color: whitesmoke;
+  }
+}
+
+.wrap {
+  display: flex;
+  height: 85vh;
+}
+.messages {
+  width: 80%;
+  overflow-y: auto;
+}
+
+.users {
+  min-width: 20%;
+  padding: 0 20px;
+  overflow-y: auto;
+  ul {
+    padding: 0;
+  }
+  ul li {
+    list-style: none;
+    margin-bottom: 8px;
+    color: #6667ab;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: lowercase;
+    overflow: hidden;
+  }
+}
+.content {
+  width: 100%;
+  &__text-row {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__user-name {
+    color: whitesmoke;
+    text-transform: lowercase;
+  }
+  &__user-message {
+    margin: 0 10px;
+    word-break: break-all;
+  }
+  &__user-notification {
+    color: rgba(193, 193, 193, 0.5);
+    text-transform: lowercase;
+  }
+}
+
+.user-input {
+  width: 100%;
+  background-color: #282c34;
+  outline: none;
+  border: none;
+}
+
+.FreeScrollbar {
+  &-container {
+    inset: 0px -17px 0px 0px !important;
+    overflow-x: hidden !important;
+  }
+  &-vertical-track {
+    background-color: transparent !important;
+    border: none !important;
+  }
+  &-vertical-handler {
+    background-color: rgba(193, 193, 193, 0.5) !important;
+    margin: 10px 0;
+    transition: all 0.2s linear 0s !important;
+  }
+  &-horizontal-track {
+    display: none;
+  }
+  &-square {
+    display: none;
+  }
+}

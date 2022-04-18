@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./Auth.scss";
 import { useNavigate } from "react-router-dom";
 
 const Auth = ({ setUsername, setIsAuth }) => {
