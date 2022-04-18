@@ -54,8 +54,10 @@ const Main = ({ username }) => {
 
   const submit = (event) => {
     event.preventDefault();
-    socket.emit("send", message);
-    setMessage("");
+    if (message) {
+      socket.emit("send", message);
+      setMessage("");
+    }
   };
 
   const returnFocus = () => {
